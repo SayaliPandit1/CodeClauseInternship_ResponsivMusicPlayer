@@ -1,0 +1,72 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5;
+
+}
+/* Define a container for the entire content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #222;
+}
+
+
+/* Style the heading */
+.heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#ccc;
+
+}
+
+/* Create a grid layout for the music gallery */
+.music-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Style each music box */
+.box {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style images inside the music box */
+.image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style the audio player to be responsive */
+.music audio {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .box {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .box {
+        grid-column: span 1;
+    }
+}
